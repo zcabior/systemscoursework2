@@ -16,7 +16,7 @@
 </style>
 </head>
 <body>
-<h1>Search here!</h1>
+<h1>Search here!!!!!!!!</h1>
 <form method="post" action="search.php" enctype="multipart/form-data" >
       Search  <input type="text" name="name" id="name"/></br>
       <input type="submit" name="search" value="Search" />
