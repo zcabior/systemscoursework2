@@ -1,9 +1,3 @@
-$sql_select = "SELECT * FROM registration_tbl g WHERE g.name LIKE CONCAT ('%',?,'%'))";
-$stmt = $conn->prepare($sql_select);
-$stmt->bindValue(1,$name);
-$stmt->execute();
-$registrants = $stmt->fetchAll();
-
 <html>
 <head>
 <Title>Search</Title>
@@ -23,7 +17,7 @@ $registrants = $stmt->fetchAll();
 </head>
 <body>
 <h1>Search here!</h1>
-<form method="post" action="index.php" enctype="multipart/form-data" >
+<form method="post" action="search.php" enctype="multipart/form-data" >
       Search  <input type="text" name="name" id="name"/></br>
       <input type="submit" name="submit" value="Select" />
 </form>
