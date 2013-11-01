@@ -19,7 +19,7 @@
 <h1>Search here!</h1>
 <form method="post" action="search.php" enctype="multipart/form-data" >
       Search  <input type="text" name="name" id="name"/></br>
-      <input type="submit" name="submit" value="Submit" />
+      <input type="submit" name="submit" value="Search" />
 </form>
 <?php
     $host = "eu-cdbr-azure-west-b.cloudapp.net";
@@ -43,7 +43,7 @@
     $registrants = $stmt->fetchAll();
  
     if(count($registrants) > 0) {
-        echo "<h2>People who are registered:</h2>";
+        echo "<h2>Search Result:</h2>";
         echo "<table>";
         echo "<tr><th>Name</th>";
         echo "<th>Email</th>";
