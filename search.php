@@ -31,7 +31,7 @@
         $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	// Retrieve data
-    $sql_select = "SELECT * FROM registration_tbl g WHERE g.name LIKE CONCAT ('%',?,'%'))";
+    $sql_select = "SELECT * FROM registration_tbl WHERE name LIKE CONCAT ('%',?,'%'))";
     $stmt = $conn->prepare($sql_select);
     $stmt->bindValue(1,$name);
     $stmt->execute();
