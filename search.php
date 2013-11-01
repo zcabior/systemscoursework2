@@ -19,7 +19,7 @@
 <h1>Search here!</h1>
 <form method="post" action="search.php" enctype="multipart/form-data" >
       Search  <input type="text" name="name" id="name"/></br>
-      <input type="submit" name="submit" value="Search" />
+      <input type="submit" name="search" value="Search" />
 </form>
 <?php
     $host = "eu-cdbr-azure-west-b.cloudapp.net";
@@ -31,6 +31,7 @@
         $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	// Retrieve data
+    $name = $_POST['name'];
     $sql_select = "SELECT * FROM registration_tbl WHERE name LIKE CONCAT ('%',?,'%')";
     $stmt = $conn->prepare($sql_select);
     $stmt->bindValue(1,$name);
