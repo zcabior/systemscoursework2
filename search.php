@@ -19,7 +19,7 @@
 <h1>Search here!</h1>
 <form method="post" action="search.php" enctype="multipart/form-data" >
       Search  <input type="text" name="name" id="name"/></br>
-      <input type="submit" name="submit" value="Select" />
+      <input type="submit" name="submit" value="Submit" />
 </form>
 <?php
     $host = "eu-cdbr-azure-west-b.cloudapp.net";
